@@ -1,0 +1,39 @@
+.plaintable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+}
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  td{
+    height: 35px!important;
+  }
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px;
+  }
+}
+.v-tabs-bar__content{
+  background: aliceblue!important;
+  .v-tab--active {
+    color: inherit;
+    background: #5f6caf;
+    color: white !important;
+    font-size: large;
+  }
+
+}
