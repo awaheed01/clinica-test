@@ -97,6 +97,11 @@ export default {
           title: 'Doctor',
           to: '/dashboard/doctor'
         },
+        {
+          icon: 'mdi-cash-usd',
+          title: 'Payment',
+          to: '/dashboard/payment'
+        },
       
       
 

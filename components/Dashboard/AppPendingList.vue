@@ -62,39 +62,6 @@ export default {
     return {
       approvedialog: false,
       checkbox: false,
-
-      pendingList: [
-        // {
-        //   profile: {
-        //     expertise: ["Consultant", "Surgeon"],
-        //     photo: null,
-        //     bio:
-        //       "Dummy Text Dummy Text Dummy Text Dummy Text Dummy Text Dummy Text",
-        //     speciality: "Opthalmology"
-        //   },
-        //   isBlocked: false,
-        //   _id: "5c367f2ace52200c51289194",
-        //   name: "Prof. Motahar Hossain Jewel",
-        //   regId: "6011",
-        //   phone: "01819279828",
-        //   email: "j@gmail.com"
-        // },
-        {
-          profile: {
-            bio: "Bio",
-            professional: "",
-            academic: "",
-            expertise: [],
-            speciality: "Internal Medicine"
-          },
-          isBlocked: false,
-          _id: "5e8f12a20e72e80b1762e0b8",
-          name: "Dr Sany Alam",
-          regId: "111111",
-          phone: "01685066284",
-          email: "shovon284@gmail.com"
-        }
-      ]
     };
   },
 
