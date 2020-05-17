@@ -12,7 +12,10 @@ export const state = () => ({
   
   export const actions = {
    async fetchData({ commit }) {
-      this.$axios.setHeader('Authorization', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTEyMjc3MTIsImRhdGEiOnsiX2lkIjoiNWM0NzRmMGE1M2ZkYzgxOGQwYjM0NDEwIiwiZW1haWwiOiJuaWxveS5hbmRyb2lkQGdtYWlsLmNvbSIsIm5hbWUiOiJOYWJpZCBTYWxlaGluIE5pbG95Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTU3OTY5MTcxMn0.LnhGVpcwA4HZDlJzA_cf2du7yUwDlsXBTaKarX2ESDs')
+
+     
+      let jwttoken = this.$auth.getToken('local').split(" ")[1];
+      this.$axios.setHeader('Authorization', jwttoken);
       await this.$axios.get('transaction/pending')
         .then((res) => {
           if (res.status === 200) {
@@ -25,7 +28,8 @@ export const state = () => ({
     async approvePayment(context, item) {
         // console.log("state" + id);
         try {
-          this.$axios.setHeader('Authorization', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTEyMjc3MTIsImRhdGEiOnsiX2lkIjoiNWM0NzRmMGE1M2ZkYzgxOGQwYjM0NDEwIiwiZW1haWwiOiJuaWxveS5hbmRyb2lkQGdtYWlsLmNvbSIsIm5hbWUiOiJOYWJpZCBTYWxlaGluIE5pbG95Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTU3OTY5MTcxMn0.LnhGVpcwA4HZDlJzA_cf2du7yUwDlsXBTaKarX2ESDs')
+          let jwttoken = this.$auth.getToken('local').split(" ")[1];
+          this.$axios.setHeader('Authorization', jwttoken);
           await this.$axios.get(`transaction/approve/${item._id}/1`)
             .then(res => {
               if(res.data.success==true){
@@ -45,7 +49,8 @@ export const state = () => ({
     async cancelPayment(context, item) {
         // console.log("state Cancel" + id);
         try {
-          this.$axios.setHeader('Authorization', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MTEyMjc3MTIsImRhdGEiOnsiX2lkIjoiNWM0NzRmMGE1M2ZkYzgxOGQwYjM0NDEwIiwiZW1haWwiOiJuaWxveS5hbmRyb2lkQGdtYWlsLmNvbSIsIm5hbWUiOiJOYWJpZCBTYWxlaGluIE5pbG95Iiwicm9sZSI6ImFkbWluIn0sImlhdCI6MTU3OTY5MTcxMn0.LnhGVpcwA4HZDlJzA_cf2du7yUwDlsXBTaKarX2ESDs')
+          let jwttoken = this.$auth.getToken('local').split(" ")[1];
+          this.$axios.setHeader('Authorization', jwttoken);
           await this.$axios.get(`transaction/approve/${item._id}/0`)
             .then(res => {
               if(res.data.success==true){
