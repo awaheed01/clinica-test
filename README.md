@@ -1,4 +1,4 @@
-# pos
+# Cliniva Dashboard
 
 > My peachy Nuxt.js project
 
